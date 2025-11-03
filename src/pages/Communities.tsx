@@ -1,9 +1,10 @@
-import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import communityImage from "@/assets/community-work.jpg";
+import Hero from "@/components/Hero";
 import { MapPin, Users, Sprout } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const communityImage = "/assets/community-work.jpg";
 
 const Communities = () => {
   const communities = [

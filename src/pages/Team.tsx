@@ -1,7 +1,8 @@
+import Hero from "@/components/Hero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users } from "lucide-react";
-import Hero from "@/components/Hero";
-import communityImage from "@/assets/community-work.jpg";
+
+const communityImage = "/assets/community-work.jpg";
 
 const Team = () => {
   const teamMembers = [

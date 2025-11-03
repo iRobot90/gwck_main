@@ -2,9 +2,10 @@ import Hero from "@/components/Hero";
 import InitiativeCard from "@/components/InitiativeCard";
 import MetricCard from "@/components/MetricCard";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-main.jpg";
-import { TreePine, GraduationCap, Leaf, Droplets, Sprout } from "lucide-react";
 import { Link } from "react-router-dom";
+import { TreePine, GraduationCap, Leaf, Droplets, Sprout } from "lucide-react";
+
+const heroImage = "/assets/hero-main.jpg";
 
 const Index = () => {
   return (

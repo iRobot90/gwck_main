@@ -1,7 +1,8 @@
-import { TrendingUp, Users, Leaf, Droplets } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Hero from "@/components/Hero";
-import transformationImage from "@/assets/transformation.jpg";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TrendingUp, Users, Leaf, Droplets } from "lucide-react";
+
+const transformationImage = "/assets/transformation.jpg";
 
 const Transformation = () => {
   const transformations = [

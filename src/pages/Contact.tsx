@@ -1,12 +1,13 @@
-import { useState } from "react";
-import { Mail, MapPin, Phone, Twitter, Instagram, Music } from "lucide-react";
 import Hero from "@/components/Hero";
-import communityImage from "@/assets/community-work.jpg";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, MapPin, Phone, Twitter, Instagram, Music } from "lucide-react";
+import { useState } from "react";
+
+const communityImage = "/assets/community-work.jpg";
 
 const Contact = () => {
   const { toast } = useToast();

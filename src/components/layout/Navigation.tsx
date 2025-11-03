@@ -2,13 +2,15 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
+
+const logoSrc = "/branding/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", path: "/" },
     { name: "Who We Are", path: "/who-we-are" },
     { name: "Our Initiatives", path: "/initiatives" },
     { name: "Our Communities", path: "/communities" },
@@ -24,12 +26,11 @@ const Navigation = () => {
       <div className="container mx-auto container-padding">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">GWC</span>
-            </div>
-            <span className="font-heading font-semibold text-lg hidden sm:inline">
-              Green World Campaign Kenya
-            </span>
+            <img
+              src={logoSrc}
+              alt="Green World Campaign Kenya"
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,6 +48,7 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <ThemeToggle />
             <Button variant="outline" size="sm" asChild className="ml-2">
               <a
                 href="https://greenworld.org/"
@@ -89,6 +91,10 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            <div className="flex items-center justify-between px-4 py-2">
+              <span className="text-sm font-medium text-muted-foreground">Theme</span>
+              <ThemeToggle />
+            </div>
             <a
               href="https://greenworld.org/"
               target="_blank"

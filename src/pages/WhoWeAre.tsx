@@ -1,6 +1,7 @@
-import Hero from "@/components/Hero";
-import communityImage from "@/assets/community-work.jpg";
 import { MapPin, Calendar, Target } from "lucide-react";
+import Hero from "@/components/Hero";
+
+const communityImage = "/assets/community-work.jpg";
 
 const WhoWeAre = () => {
   return (

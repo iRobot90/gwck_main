@@ -11,7 +11,8 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Hero from "@/components/Hero";
-import youthImage from "@/assets/youth-education.jpg";
+
+const youthImage = "/assets/youth-education.jpg";
 
 const Initiatives = () => {
   const initiatives = [
