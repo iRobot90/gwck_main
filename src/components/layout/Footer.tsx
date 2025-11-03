@@ -6,8 +6,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto container-padding section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto container-padding py-12 md:py-16">
+        <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-4">
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">
               Green World Campaign Kenya
@@ -108,7 +108,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-primary-foreground/20 text-center text-sm opacity-75">
+        <div className="pt-6 border-t border-primary-foreground/20 text-center text-xs md:text-sm opacity-75">
           <p>
             © {currentYear} Green World Campaign Kenya. All rights reserved.
           </p>
