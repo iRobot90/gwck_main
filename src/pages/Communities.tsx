@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import communityImage from "@/assets/community-work.jpg";
 import { MapPin, Users, Sprout } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Communities = () => {
   const communities = [
@@ -36,9 +34,7 @@ const Communities = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={communityImage}
         title="Our Communities"
@@ -160,8 +156,7 @@ const Communities = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </>
   );
 };
 

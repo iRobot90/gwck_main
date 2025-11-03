@@ -1,18 +1,14 @@
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import Hero from "@/components/Hero";
 import InitiativeCard from "@/components/InitiativeCard";
 import MetricCard from "@/components/MetricCard";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-main.jpg";
 import { TreePine, GraduationCap, Leaf, Droplets, Sprout } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={heroImage}
         title="Regenerating Landscapes. Empowering Communities."
@@ -136,9 +132,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </>
   );
 };
 

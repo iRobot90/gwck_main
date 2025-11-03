@@ -1,9 +1,7 @@
-import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import communityImage from "@/assets/community-work.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users } from "lucide-react";
+import Hero from "@/components/Hero";
+import communityImage from "@/assets/community-work.jpg";
 
 const Team = () => {
   const teamMembers = [
@@ -40,9 +38,7 @@ const Team = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={communityImage}
         title="Our Team"
@@ -137,8 +133,7 @@ const Team = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </>
   );
 };
 

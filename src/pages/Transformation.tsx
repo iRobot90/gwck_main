@@ -1,9 +1,7 @@
-import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import transformationImage from "@/assets/transformation.jpg";
 import { TrendingUp, Users, Leaf, Droplets } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Hero from "@/components/Hero";
+import transformationImage from "@/assets/transformation.jpg";
 
 const Transformation = () => {
   const transformations = [
@@ -46,9 +44,7 @@ const Transformation = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={transformationImage}
         title="Community Transformation"
@@ -210,8 +206,7 @@ const Transformation = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </>
   );
 };
 

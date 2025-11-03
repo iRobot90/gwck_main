@@ -1,14 +1,12 @@
 import { useState } from "react";
+import { Mail, MapPin, Phone, Twitter, Instagram, Music } from "lucide-react";
 import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import communityImage from "@/assets/community-work.jpg";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, MapPin, Phone, Twitter, Instagram, Music } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -55,9 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={communityImage}
         title="Contact Us"
@@ -287,8 +283,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,14 +1,10 @@
 import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import communityImage from "@/assets/community-work.jpg";
 import { MapPin, Calendar, Target } from "lucide-react";
 
 const WhoWeAre = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={communityImage}
         title="Who We Are"
@@ -107,8 +103,7 @@ const WhoWeAre = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </>
   );
 };
 

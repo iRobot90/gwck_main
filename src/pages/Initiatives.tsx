@@ -1,8 +1,4 @@
-import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import youthImage from "@/assets/youth-education.jpg";
-import { 
+import {
   TreePine, 
   GraduationCap, 
   Leaf, 
@@ -14,6 +10,8 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Hero from "@/components/Hero";
+import youthImage from "@/assets/youth-education.jpg";
 
 const Initiatives = () => {
   const initiatives = [
@@ -108,9 +106,7 @@ const Initiatives = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      
+    <>
       <Hero
         image={youthImage}
         title="Our Initiatives"
@@ -229,8 +225,7 @@ const Initiatives = () => {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </>
   );
 };
 
