@@ -12,6 +12,9 @@ import Transformation from "./pages/Transformation";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import MEReports from "./pages/resources/MEReports";
+import AnnualReports from "./pages/resources/AnnualReports";
+import Gallery from "./pages/resources/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +33,9 @@ const App = () => (
             <Route path="/transformation" element={<Transformation />} />
             <Route path="/team" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resources/me-reports" element={<MEReports />} />
+            <Route path="/resources/annual-reports" element={<AnnualReports />} />
+            <Route path="/resources/gallery" element={<Gallery />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,8 +1,14 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X, ExternalLink, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/ThemeToggle";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const logoSrc = "/branding/logo.png";
 
@@ -48,6 +54,31 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+
+            {/* Resources dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="px-3 py-2 rounded-md text-sm font-medium hover:bg-muted inline-flex items-center gap-1 focus:outline-none data-[state=open]:bg-muted">
+                Resources <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link to="/resources/me-reports" className="w-full">
+                    M&E Reports
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/resources/annual-reports" className="w-full">
+                    Annual Reports
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/resources/gallery" className="w-full">
+                    Gallery
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <ThemeToggle />
             <Button variant="outline" size="sm" asChild className="ml-2">
               <a
@@ -91,6 +122,35 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
+            {/* Mobile Resources group */}
+            <div className="pt-2">
+              <div className="px-4 py-2 text-xs uppercase tracking-wide text-muted-foreground">
+                Resources
+              </div>
+              <div className="space-y-1">
+                <Link
+                  to="/resources/me-reports"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-6 py-2 rounded-md text-sm hover:bg-muted transition-smooth"
+                >
+                  M&E Reports
+                </Link>
+                <Link
+                  to="/resources/annual-reports"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-6 py-2 rounded-md text-sm hover:bg-muted transition-smooth"
+                >
+                  Annual Reports
+                </Link>
+                <Link
+                  to="/resources/gallery"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-6 py-2 rounded-md text-sm hover:bg-muted transition-smooth"
+                >
+                  Gallery
+                </Link>
+              </div>
+            </div>
             <div className="flex items-center justify-between px-4 py-2">
               <span className="text-sm font-medium text-muted-foreground">Theme</span>
               <ThemeToggle />

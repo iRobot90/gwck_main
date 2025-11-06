@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto container-padding py-12 md:py-16">
-        <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-5">
           <div>
             <h3 className="font-heading font-semibold text-lg mb-4">
               Green World Campaign Kenya
@@ -38,6 +38,27 @@ const Footer = () => {
               <li>
                 <Link to="/team" className="opacity-90 hover:opacity-100 transition-smooth">
                   Team
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-heading font-medium mb-4">Resources</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/resources/me-reports" className="opacity-90 hover:opacity-100 transition-smooth">
+                  M&E Reports
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/annual-reports" className="opacity-90 hover:opacity-100 transition-smooth">
+                  Annual Reports
+                </Link>
+              </li>
+              <li>
+                <Link to="/resources/gallery" className="opacity-90 hover:opacity-100 transition-smooth">
+                  Gallery
                 </Link>
               </li>
             </ul>

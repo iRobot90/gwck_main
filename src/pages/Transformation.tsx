@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp, Users, Leaf, Droplets } from "lucide-react";
+import ShapefileBeforeAfterPlaceholder from "@/components/maps/ShapefileBeforeAfterPlaceholder";
 
 const transformationImage = "/assets/transformation.jpg";
 
@@ -61,6 +62,13 @@ const Transformation = () => {
               restoration and sustainable development journeys.
             </p>
           </div>
+
+          {/* Restore shapefiles before/after placeholder */}
+          <section className="section-padding">
+            <div className="container mx-auto container-padding">
+              <ShapefileBeforeAfterPlaceholder />
+            </div>
+          </section>
 
           <div className="space-y-8">
             {transformations.map((story, index) => (
