@@ -62,6 +62,15 @@ const Transformation = () => {
             </p>
           </div>
 
+          {/* TODO: Restore shapefiles before/after map */}
+          <section className="section-padding">
+            <div className="container mx-auto container-padding">
+              <div className="bg-muted/30 border border-border rounded-lg p-6 text-sm text-muted-foreground">
+                Map placeholder — integrate Restore shapefile layers here for before/after visualization (e.g., MapLibre/Leaflet with shapefile → GeoJSON/tiles).
+              </div>
+            </div>
+          </section>
+
           <div className="space-y-8">
             {transformations.map((story, index) => (
               <Card 
