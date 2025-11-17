@@ -1,41 +1,133 @@
 import Hero from "@/components/Hero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users } from "lucide-react";
+import { Linkedin, Twitter, Mail } from "lucide-react";
 
 const communityImage = "/assets/community-work.jpg";
+const placeholderImage = "/images/logo.png?height=300&width=300";
 
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Khamis Mbwana",
-      role: "Executive Director",
-      bio: "Environmental scientist with 15+ years leading community conservation initiatives."
+      name: "Caroline Dama",
+      role: "Country Coordinator, Green World Campaign Kenya",
+      bio: "Dama is the Country Coordinator of Green World Campaign Kenya. She manages grants, human resources, resource mobilization, and leads regenerative projects with indigenous coastal communities and institutions.",
+      image: "/images/logo.png?height=300&width=300",
+      social: {
+        linkedin: "https://www.linkedin.com/in/caroline-dama-902264116/",
+        twitter: "#",
+        email: "dama@greenworld.org",
+      },
     },
     {
-      name: "Amina Hassan",
+      name: "Lydia Anyango",
       role: "Programs Coordinator",
-      bio: "Specializes in participatory development and community engagement strategies."
+      bio: "Lydia fosters a safe environment for adolescents, youth, and young mothers. She facilitates discussions on Sexual Reproductive Health and Rights (SRHR) and connects SRHR with environmental sustainability through community initiatives promoting trees and nature.",
+      image: "/images/team/lydia-removebg-preview.png",
+      social: {
+        linkedin: "https://www.linkedin.com/in/lydia-anyango-ba7b07138/",
+        twitter: "#",
+        email: "lydia@greenworld.org",
+      },
     },
     {
-      name: "John Mwangi",
-      role: "Agroforestry Lead",
-      bio: "Agronomist focused on sustainable farming systems and climate adaptation."
+      name: "Isaac Otieno",
+      role: "Monitoring, Evaluation & Learning (MEL) Specialist",
+      bio: "Isaac develops systems to assess program effectiveness, analyzes data, and promotes continuous improvement to ensure impactful initiatives. He oversees data collection, employs statistical tools, and communicates findings to inform strategic decisions.",
+      image: "/images/logo.png?height=300&width=300",
+      social: {
+        linkedin: "https://www.linkedin.com/in/isaac-otieno-216b231a2/",
+        twitter: "#",
+        email: "isaacnewton@greenworld.org",
+      },
     },
     {
-      name: "Grace Wanjiru",
-      role: "Youth & Education Officer",
-      bio: "Passionate about empowering young environmental champions across Kenya."
+      name: "Christine Pendo",
+      role: "Community Health and Development Social Worker",
+      bio: "Christine empowers communities with health knowledge, including reproductive health, mental health, and life skills. She promotes nutrition and sustainable food sources, aiding climate adaptation and food security in ASAL communities.",
+      image: "/images/team/pendo-removebg-preview.png",
+      social: {
+        linkedin: "https://www.linkedin.com/in/christine-karisa-872556225/",
+        twitter: "#",
+        email: "christinependo@greenworld.org",
+      },
     },
     {
-      name: "Omar Said",
-      role: "Forest Conservation Specialist",
-      bio: "Works with traditional communities on Kaya forest protection and restoration."
+      name: "Mary Tsuma",
+      role: "Program Officer (Samburu & Kwale)",
+      bio: "Mary Tsuma oversees over 24 sites, training schools and indigenous coastal communities in arid lands. She supports model sites like Miyani Primary School, promoting regenerative agroforestry, water harvesting, and inclusive economic empowerment.",
+      image: "/images/logo.png?height=300&width=300",
+      social: {
+        linkedin: "https://www.linkedin.com/in/mary-tsuma-26795a219/",
+        twitter: "#",
+        email: "#",
+      },
     },
     {
-      name: "Fatuma Ali",
-      role: "Community Outreach Manager",
-      bio: "Builds partnerships and ensures community voices guide all programs."
-    }
+      name: "Juma Gassambi",
+      role: "Program Officer (Matuga & Kinango, Kwale)",
+      bio: "Juma promotes environmental awareness and regenerative practices, training pupils and communities on setting up nurseries, syntropic farming, and mangrove restoration. He supports biodiversity and natural water harvesting.",
+      image: "/images/logo.png?height=300&width=300",
+      social: {
+        linkedin: "https://www.linkedin.com/in/juma-gassambi-7aa087212/",
+        twitter: "#",
+        email: "#",
+      },
+    },
+    {
+      name: "Juma Kazungu",
+      role: "Program Officer (Kilifi)",
+      bio: "Juma promotes environmental awareness and trains communities on tree nurseries, natural water harvesting, and building food forests. He collaborates with Kenya Forest Service on mangrove restoration.",
+      image: "/images/team/JUMA_KAZUNGU-removebg-preview.png",
+      social: {
+        linkedin: "https://www.linkedin.com/in/juma-kazungu-50b985211/",
+        twitter: "#",
+        email: "#",
+      },
+    },
+    {
+      name: "Lucas Kitsao",
+      role: "Social Enterprise Coordinator",
+      bio: "Lucas manages GWC's farm-level processing of moringa and coconut products, including virgin coconut oil, creating market access for rural communities and ensuring fair compensation. He connects producers with global markets, promoting sustainable livelihoods.",
+      image: "/images/logo.png?height=300&width=300",
+      social: {
+        linkedin: "https://www.linkedin.com/in/lucas-kitsao-517b61211/",
+        twitter: "#",
+        email: "#",
+      },
+    },
+    {
+      name: "Morgan Mgute",
+      role: "Social Enterprise Intern",
+      bio: "Mgute specializes in the production and promotion of coconut oil within GWC's social enterprise, contributing to community empowerment and sustainable income generation.",
+      image: "/images/team/morgan-removebg-preview.png",
+      social: {
+        linkedin: "https://www.linkedin.com/in/morgan-mgute-210579263/",
+        twitter: "#",
+        email: "morganmgute@greenworld.org",
+      },
+    },
+    {
+      name: "Conny Mwaka",
+      role: "Community Health Worker",
+      bio: "Conny serves as a bridge between health services and communities, delivering crucial information on reproductive health and life skills. She advocates for sustainable nutrition and climate-resilient agriculture to ensure food security in all regions, driving positive change from the ground up.",
+      image: "/images/team/conny-removebg-preview.png",
+      social: {
+        linkedin: "https://www.linkedin.com/in/conny-mwaka-25a510316/",
+        twitter: "#",
+        email: "connymwaka0@gmail.com",
+      },
+    },
+    {
+      name: "Shanga Mbuli",
+      role: "Programs Officer",
+      bio: "Shanga is the GWC-K's programs officer whose role is to mainly promote environmental awareness and sustainable practices by training pupils in both public and private institutions and community groups on how to establish tree and vegetable nurseries. With a goal to ensure reforestation, food production, and biodiversity enhancement in line with GWC-K's holistic intervention model.",
+      image: "/images/logo.png?height=300&width=300",
+      social: {
+        linkedin: "https://www.linkedin.com/in/mbuli-shanga-07547221a/",
+        twitter: "#",
+        email: "#",
+      },
+    },
   ];
 
   return (
@@ -64,9 +156,11 @@ const Team = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader>
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 mx-auto">
-                    <Users className="w-8 h-8 text-primary" />
-                  </div>
+                  <img
+                    src={member.image || placeholderImage}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border border-border"
+                  />
                   <CardTitle className="font-heading text-xl text-center">
                     {member.name}
                   </CardTitle>
@@ -78,6 +172,25 @@ const Team = () => {
                   <p className="text-sm text-muted-foreground text-center">
                     {member.bio}
                   </p>
+                  {member.social && (
+                    <div className="flex items-center justify-center gap-4 mt-4">
+                      {member.social.linkedin && member.social.linkedin !== "#" && (
+                        <a href={member.social.linkedin} target="_blank" rel="noreferrer" aria-label={`${member.name} LinkedIn`} className="text-muted-foreground hover:text-primary transition-colors">
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.social.twitter && member.social.twitter !== "#" && (
+                        <a href={member.social.twitter} target="_blank" rel="noreferrer" aria-label={`${member.name} Twitter`} className="text-muted-foreground hover:text-primary transition-colors">
+                          <Twitter className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.social.email && member.social.email !== "#" && (
+                        <a href={`mailto:${member.social.email}`} aria-label={`${member.name} Email`} className="text-muted-foreground hover:text-primary transition-colors">
+                          <Mail className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}

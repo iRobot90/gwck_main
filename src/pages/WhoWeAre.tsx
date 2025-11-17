@@ -9,7 +9,7 @@ const WhoWeAre = () => {
       <Hero
         image={communityImage}
         title="Who We Are"
-        subtitle="Building resilience through environmental restoration and community empowerment"
+        subtitle="Building resilient and biodiverse small holder farmers"
       />
 
       <section className="section-padding">
@@ -18,11 +18,7 @@ const WhoWeAre = () => {
             <div className="prose prose-lg max-w-none">
               <h2 className="font-heading font-bold text-3xl mb-6">Our Story</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Green World Campaign Kenya (GWC-K) was established in 2010 and officially registered 
-                in 2011 as a non-profit organization dedicated to environmental conservation and 
-                community development. Born from a vision to address the interconnected challenges of 
-                environmental degradation and poverty in coastal Kenya, we have grown into a trusted 
-                partner for communities across three counties.
+                Green World Campaign Kenya (GWC-K) was established in 2010 and officially registered in 2011 as a non-profit organization dedicated to environmental conservation and community development. Born from a vision to address the interconnected challenges of environmental degradation and food security improving livelihoods of indigenous coastal communities, some of whom are in arid and semi arid land.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
@@ -58,9 +54,7 @@ const WhoWeAre = () => {
 
               <h2 className="font-heading font-bold text-3xl mb-6 mt-12">Our Approach</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                GWC-K employs a systems-based approach that recognizes the interconnections between 
-                environmental health, community wellbeing, and economic opportunity. We work directly 
-                with communities to:
+                GWC-K employs a systems-based approach that recognizes the interconnections between the community and their socio- economic well being.
               </p>
               <ul className="list-disc list-inside space-y-3 text-muted-foreground mb-6">
                 <li>Restore degraded forests and coastal ecosystems</li>
@@ -73,8 +67,7 @@ const WhoWeAre = () => {
 
               <h2 className="font-heading font-bold text-3xl mb-6 mt-12">Geographic Focus</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our work spans three counties along Kenya's coast, each with unique environmental 
-                and social contexts:
+                Our work spans three counties along Kenya's coast—Mombasa, Kilifi, and Kwale—each with distinct environmental and social contexts. In Mombasa, we focus on urban environmental restoration, mangrove protection, and school-based climate education programs. Kilifi hosts initiatives around Kaya forest conservation, the development of agroforestry systems, and community-based natural resource management. In Kwale, our efforts center on food security, the restoration of indigenous crops, and the promotion of sustainable livelihood development. Together, these interventions reflect a holistic approach to environmental and community resilience across the coastal region.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-muted/50 rounded-lg p-6">
@@ -109,3 +102,4 @@ const WhoWeAre = () => {
 };
 
 export default WhoWeAre;
+
