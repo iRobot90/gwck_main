@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import InitiativeCard from "@/components/InitiativeCard";
 import MetricCard from "@/components/MetricCard";
@@ -12,8 +13,8 @@ const Index = () => {
     <>
       <Hero
         image={heroImage}
-        title="Regenerating Landscapes. Empowering Communities."
-        subtitle="Driving environmental regeneration and community empowerment across coastal Kenya"
+        title="Regenerating Landscapes. Co-creating Local Solutions"
+        subtitle="Driving environmental regeneration and community Knowledge sharing across coastal Kenya"
       >
         <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
           <Link to="/who-we-are">Explore Our Impact</Link>
@@ -28,9 +29,7 @@ const Index = () => {
               Building a Sustainable Future
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in">
-              Since 2010, Green World Campaign Kenya has been at the forefront of environmental 
-              restoration and community development across Mombasa, Kilifi, and Kwale. We combine 
-              traditional knowledge with innovative approaches to create lasting change.
+              Since 2010, Green World Campaign Kenya has been at the forefront of environmental restoration and community development across Mombasa, Kilifi, and Kwale. We co-create solutions with the indigenous coastal communities to address the interconnected challenges of environmental degradation and food security improving livelihoods of indigenous coastal communities, some of whom are in arid and semi arid land
             </p>
           </div>
         </div>
@@ -42,21 +41,26 @@ const Index = () => {
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12">
             Our Impact
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <MetricCard
-              value="500K+"
-              label="Trees Planted"
+              value="4M+"
+              label="Trees planted in Kilifi, Mombasa and Kwale counties"
               icon={<TreePine className="w-8 h-8" />}
             />
             <MetricCard
-              value="10K+"
-              label="Youth Reached"
+              value="100"
+              label="Schools engaged"
+              icon={<Sprout className="w-8 h-8" />}
+            />
+            <MetricCard
+              value="70K+"
+              label="Pupils engaged each year"
               icon={<GraduationCap className="w-8 h-8" />}
             />
             <MetricCard
-              value="150+"
-              label="Schools Engaged"
-              icon={<Sprout className="w-8 h-8" />}
+              value="40"
+              label="Youth groups"
+              icon={<Leaf className="w-8 h-8" />}
             />
           </div>
         </div>
@@ -138,3 +142,4 @@ const Index = () => {
 };
 
 export default Index;
+

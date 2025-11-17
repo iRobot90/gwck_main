@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Hero from "@/components/Hero";
 import { MapPin, Users, Sprout } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -7,6 +8,12 @@ import { Link } from "react-router-dom";
 const communityImage = "/assets/community-work.jpg";
 
 const Communities = () => {
+  const slides = [
+    { src: "/assets/community-work.jpg", caption: "Community tree planting and mangrove restoration" },
+    { src: "/assets/youth-education.jpg", caption: "Climate literacy with youth leaders" },
+    { src: "/assets/transformation.jpg", caption: "Restored landscapes and resilient livelihoods" },
+    { src: "/assets/hero-main.jpg", caption: "Co-creating local solutions across coastal Kenya" },
+  ];
   const communities = [
     {
       name: "Mombasa Communities",
@@ -39,8 +46,36 @@ const Communities = () => {
       <Hero
         image={communityImage}
         title="Our Communities"
-        subtitle="Building partnerships across coastal Kenya for lasting environmental and social change"
+        subtitle="Building resilient and bio-diverse farmers through partnerships across coastal Kenya for lasting environmental and social change"
       />
+
+      {/* Communities Carousel */}
+      <section className="section-padding bg-muted/30">
+        <div className="container mx-auto container-padding">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-8">Our Communities</h2>
+          <div className="relative max-w-5xl mx-auto">
+            <Carousel className="w-full" opts={{ loop: true }}>
+              <CarouselContent>
+                {slides.map((slide, idx) => (
+                  <CarouselItem key={idx} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="group overflow-hidden rounded-lg border border-border bg-card">
+                      <div
+                        className="h-56 bg-cover bg-center transition-smooth group-hover:scale-105"
+                        style={{ backgroundImage: `url(${slide.src})` }}
+                      />
+                      <div className="p-4">
+                        <p className="text-sm text-muted-foreground">{slide.caption}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="-left-4 md:-left-8" />
+              <CarouselNext className="-right-4 md:-right-8" />
+            </Carousel>
+          </div>
+        </div>
+      </section>
 
       <section className="section-padding">
         <div className="container mx-auto container-padding">
@@ -154,6 +189,26 @@ const Communities = () => {
           <Button size="lg" variant="secondary" asChild>
             <Link to="/transformation">View Transformation Stories</Link>
           </Button>
+        </div>
+      </section>
+
+      {/* Instagram Embed */}
+      <section className="section-padding">
+        <div className="container mx-auto container-padding">
+          <h2 className="font-heading font-bold text-3xl text-center mb-6">Instagram</h2>
+          <p className="text-center text-muted-foreground mb-6">Follow our latest updates from the field.</p>
+          <div className="rounded-lg overflow-hidden border border-border max-w-3xl mx-auto aspect-[4/3]">
+            <iframe
+              src="https://www.instagram.com/gwckenya/embed"
+              title="GWC-K Instagram"
+              width="100%"
+              height="100%"
+              style={{ border: "0" }}
+              frameBorder={0}
+              scrolling="no"
+              allow="encrypted-media"
+            />
+          </div>
         </div>
       </section>
 

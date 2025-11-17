@@ -90,19 +90,19 @@ const Initiatives = () => {
 
   const specialPrograms = [
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: "Maternal Health & Family Planning",
-      description: "Integrating reproductive health services with environmental programs to support women's wellbeing and sustainable population growth."
+      icon: <Users className="w-6 h-6" />,
+      title: "Life Skills",
+      description: "Equipping youth and community members with practical skills for leadership, livelihoods, and community engagement."
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Nutrition Project",
-      description: "Community-based nutrition education combined with home gardens to combat malnutrition and improve child health outcomes."
+      icon: <Heart className="w-6 h-6" />,
+      title: "Mental & Menstrual Health",
+      description: "Promoting wellbeing through mental health awareness and menstrual health education with dignity kits and support."
     },
     {
       icon: <Leaf className="w-6 h-6" />,
-      title: "Social Enterprise: Cold-Pressed Coconut Oil",
-      description: "Supporting women's cooperatives in producing high-quality coconut oil, creating income while utilizing local resources sustainably."
+      title: "Nutrition",
+      description: "Nutrition education integrated with kitchen gardens and indigenous foods to improve household diets."
     }
   ];
 
@@ -169,11 +169,11 @@ const Initiatives = () => {
         </div>
       </section>
 
-      {/* Special Programs */}
+      {/* Special Program */}
       <section className="section-padding bg-muted/30">
         <div className="container mx-auto container-padding">
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4">
-            Special Programs
+            Special Program
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
             Targeted interventions addressing specific community needs
